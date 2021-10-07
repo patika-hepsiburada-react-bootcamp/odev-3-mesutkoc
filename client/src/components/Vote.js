@@ -4,19 +4,22 @@ import { sendVote, connectSocket, subscribeToNewVote } from "../socketApi";
 
 function Vote() {
   const { vote, setVote } = useVote();
-  
+  // console.log(vote);
   useEffect(() => {
     connectSocket();
 
     subscribeToNewVote((vote) => {
-      console.log(vote);
+      // console.log(vote);
       setVote(vote);
     });
   }, []);
 
   const handleSubmit = (data) => {
-    console.log(data)
-    
+    vote.filter((item, index) =>
+      item.name === data ? (vote[index].vote = item.vote + 1) : null
+    );
+    sendVote('new-vote',[...vote]);
+    setVote([...vote]);
   };
 
   return (
