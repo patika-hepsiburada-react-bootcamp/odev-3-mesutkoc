@@ -15,8 +15,8 @@ function Vote() {
   }, []);
 
   const handleSubmit = (data) => {
-    vote.filter((item, index) =>
-      item.name === data ? (vote[index].vote = item.vote + 1) : null
+    vote.filter((item) =>
+      item.name === data && (item.vote = item.vote + 1)
     );
     sendVote('new-vote',[...vote]);
     setVote([...vote]);
