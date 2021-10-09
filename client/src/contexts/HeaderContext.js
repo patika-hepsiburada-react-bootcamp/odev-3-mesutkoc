@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react';
 const HeaderContext = createContext();
 
 export const HeaderProvider = ({ children }) => {
-    const [title, setTitle] = useState("Mesut Koç");
+    const [title, setTitle] = useState("Keep Choice");
 
     const values = {
         title,

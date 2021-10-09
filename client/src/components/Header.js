@@ -2,13 +2,10 @@ import React from "react";
 import { useTitle } from "../contexts/HeaderContext";
 
 function Header() {
-  const { title, setTitle } = useTitle();
+  const { title } = useTitle();
   return (
     <div>
-      <span>{title}</span>
-      <button type="button" onClick={() => setTitle("Muhammet Koç")}>
-        Set Title
-      </button>
+      <h1>{title}</h1>
     </div>
   );
 }

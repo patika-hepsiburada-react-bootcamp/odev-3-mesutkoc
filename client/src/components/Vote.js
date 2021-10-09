@@ -1,24 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useVote } from "../contexts/VoteContext";
-import { sendVote, connectSocket, subscribeToNewVote } from "../socketApi";
+import { sendVote} from "../socketApi";
 
 function Vote() {
   const { vote, setVote } = useVote();
-  // console.log(vote);
-  useEffect(() => {
-    connectSocket();
-
-    subscribeToNewVote((vote) => {
-      // console.log(vote);
-      setVote(vote);
-    });
-  }, []);
 
   const handleSubmit = (data) => {
-    vote.filter((item) =>
-      item.name === data && (item.vote = item.vote + 1)
-    );
-    sendVote('new-vote',[...vote]);
+    vote.filter((item) => item.name === data && (item.vote = item.vote + 1));
+    sendVote("new-vote", [...vote]);
     setVote([...vote]);
   };
 
