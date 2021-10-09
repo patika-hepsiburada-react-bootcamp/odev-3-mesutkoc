@@ -17,15 +17,19 @@ export const VoteProvider = ({ children }) => {
       vote: 0,
     },
     {
+      name: "Pardus",
+      vote: 0,
+    },
+    {
       name: "Something Else",
       vote: 0,
     },
   ];
   const [vote, setVote] = useState(selections);
-
   const values = {
     vote,
     setVote,
+  
   };
 
   return <VoteContext.Provider value={values}>{children}</VoteContext.Provider>;

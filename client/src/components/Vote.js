@@ -1,42 +1,17 @@
 import React from "react";
 import { useVote } from "../contexts/VoteContext";
-import { sendVote} from "../socketApi";
+import Radio from "./Radio";
 
 function Vote() {
-  const { vote, setVote } = useVote();
-
-  const handleSubmit = (data) => {
-    vote.filter((item) => item.name === data && (item.vote = item.vote + 1));
-    sendVote("new-vote", [...vote]);
-    setVote([...vote]);
-  };
-
+  const { vote } = useVote();
   return (
-    <div>
-      <input
-        type="button"
-        value="Windows"
-        className="vote-button"
-        onClick={(e) => handleSubmit(e.target.value)}
-      />
-      <input
-        type="button"
-        value="MacOS"
-        className="vote-button"
-        onClick={(e) => handleSubmit(e.target.value)}
-      />
-      <input
-        type="button"
-        value="A Linux Distro"
-        className="vote-button"
-        onClick={(e) => handleSubmit(e.target.value)}
-      />
-      <input
-        type="button"
-        value="Something Else"
-        className="vote-button"
-        onClick={(e) => handleSubmit(e.target.value)}
-      />
+    <div className="vote">
+      <div className="question">Choose best OS.</div>
+      <div className="radioButtons">
+        {vote.map((radio, index) => (
+          <Radio values={radio} key={index} />
+        ))}
+      </div>
     </div>
   );
 }

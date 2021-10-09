@@ -23,6 +23,10 @@ let selections = [
     vote: 0,
   },
   {
+    name: "Pardus",
+    vote: 0,
+  },
+  {
     name: "Something Else",
     vote: 0,
   },

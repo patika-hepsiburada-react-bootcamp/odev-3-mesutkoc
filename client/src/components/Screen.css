@@ -1,0 +1,27 @@
+.displayScreen {
+ background-color: red;
+}
+.vote {
+  float: right;
+  
+  border:0.3rem solid #FF4500;
+  border-radius: 0.3rem;
+  width: 20rem;
+  height: 20rem;
+  font-size:1rem;
+}
+.results {
+  float: left;
+  border:0.3rem solid #FF4500;
+  border-radius: 0.3rem;
+}
+.bar{
+  width: 30rem;
+  height: 30rem;
+}
+.header {
+  margin-top: -2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color:#FF4500;
+}

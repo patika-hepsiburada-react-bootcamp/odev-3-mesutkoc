@@ -4,7 +4,7 @@ import { useTitle } from "../contexts/HeaderContext";
 function Header() {
   const { title } = useTitle();
   return (
-    <div>
+    <div className="header">
       <h1>{title}</h1>
     </div>
   );

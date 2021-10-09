@@ -2,7 +2,8 @@ import Results from "./Results"
 import Vote from "./Vote";
 import { connectSocket, subscribeToNewVote } from "../socketApi";
 import { useVote } from "../contexts/VoteContext";
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
+import "./Screen.css"
 
 function Screen() {
   const { setVote } = useVote();
@@ -16,7 +17,7 @@ function Screen() {
     });
   }, [setVote]);
   return (
-    <div>
+    <div className="displayScreen">
       <Results></Results>
       <Vote></Vote>
     </div>
