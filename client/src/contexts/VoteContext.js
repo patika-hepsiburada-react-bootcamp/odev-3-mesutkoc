@@ -5,19 +5,19 @@ const VoteContext = createContext();
 export const VoteProvider = ({ children }) => {
   const selections = [
     {
-      name: "Windows",
+      name: "Cheeky Child",
       vote: 0,
     },
     {
-      name: "MacOS",
+      name: "Tormented Teenager",
       vote: 0,
     },
     {
-      name: "A Linux Distro",
+      name: "Mad Mid Lifer",
       vote: 0,
     },
     {
-      name: "Pardus",
+      name: "Groovy Grandparent",
       vote: 0,
     },
     {

@@ -3,7 +3,9 @@ import { io } from "socket.io-client";
 let socket;
 export const connectSocket = () => {
   console.log("Connectting");
-  socket = io("http://localhost:3000", { transports: ["websocket"] });
+  socket = io("https://voting-backend-node.herokuapp.com/", {
+    transports: ["websocket"],
+  });
 
   socket.on("connect", () => {
     console.log("connected");
