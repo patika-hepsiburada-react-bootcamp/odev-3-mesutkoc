@@ -1,7 +1,6 @@
 import Results from "./Results";
 import Vote from "./Vote";
 import TotalPanel from "./TotalPanel";
-
 import { connectSocket, subscribeToNewVote } from "../socketApi";
 import { useVote } from "../contexts/VoteContext";
 import React, { useEffect } from "react";
@@ -14,7 +13,6 @@ function Screen() {
     connectSocket();
 
     subscribeToNewVote((vote) => {
-      // console.log(vote);
       setVote(vote);
     });
   }, [setVote]);
@@ -22,7 +20,7 @@ function Screen() {
   return (
     <div className="displayScreen">
       {totalVotes === 0 ? (
-        <div>Loading Votes...</div>
+        <div className="loading">Loading Votes...</div>
       ) : (
         <div className="mainPage">
           <Results></Results>

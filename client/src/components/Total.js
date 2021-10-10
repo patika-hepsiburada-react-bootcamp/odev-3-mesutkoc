@@ -1,7 +1,6 @@
 import React from "react";
 
 function Total(item) {
-  console.log(item);
   return (
     <div className="total">
       <p>{item.values.name}</p>
