@@ -1,13 +1,15 @@
-import Results from "./Results"
+import Results from "./Results";
 import Vote from "./Vote";
+import TotalPanel from "./TotalPanel";
+
 import { connectSocket, subscribeToNewVote } from "../socketApi";
 import { useVote } from "../contexts/VoteContext";
 import React, { useEffect } from "react";
-import "./Screen.css"
+import "./Screen.css";
 
 function Screen() {
-  const { setVote } = useVote();
-
+  const { vote, setVote } = useVote();
+  const totalVotes = vote.reduce((first, second) => first + second.vote, 0);
   useEffect(() => {
     connectSocket();
 
@@ -16,10 +18,18 @@ function Screen() {
       setVote(vote);
     });
   }, [setVote]);
+
   return (
     <div className="displayScreen">
-      <Results></Results>
-      <Vote></Vote>
+      {totalVotes === 0 ? (
+        <div>Loading Votes...</div>
+      ) : (
+        <div className="mainPage">
+          <Results></Results>
+          <TotalPanel></TotalPanel>
+          <Vote></Vote>
+        </div>
+      )}
     </div>
   );
 }

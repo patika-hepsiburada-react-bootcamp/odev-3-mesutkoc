@@ -1,27 +1,84 @@
 .displayScreen {
- background-color: red;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 .vote {
-  float: right;
-  
-  border:0.3rem solid #FF4500;
-  border-radius: 0.3rem;
+  float: left;
   width: 20rem;
   height: 20rem;
-  font-size:1rem;
+  font-size: 1rem;
+  padding: 2rem 0;
 }
 .results {
   float: left;
-  border:0.3rem solid #FF4500;
+  border: 0.2rem solid #ff4500;
   border-radius: 0.3rem;
 }
-.bar{
-  width: 30rem;
-  height: 30rem;
+.bar {
+  width: 25rem;
+  height: 25rem;
 }
 .header {
   margin-top: -2rem;
   text-align: center;
-  font-size: 1.5rem;
-  color:#FF4500;
+  font-size: 1.2rem;
+  color: #ff4500;
+}
+.totalVotes {
+  float: left;
+  height: 25rem;
+  width: 25rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+}
+.total {
+  text-align: center;
+  width: 8rem;
+  height: 5.5rem;
+  border: 0.2rem solid #ff4500;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin: 0.2rem;
+}
+.totalPercent {
+  font-weight: bold;
+}
+.radioButton {
+  border: 0.2rem solid #ff4500;
+  margin-top: 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  text-align: center;
+}
+.radioButton:hover{
+  background-color: #ff4500;
+}
+.question {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #ff4500;
+  border-radius: 0.3rem;
+  padding: 0.2rem;
+  color: white;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  background: rgb(255, 69, 0, 0.7);
+}
+.footer .footerText {
+  color: black;
+  text-align: center;
+}
+
+.footerIcon {
+  height: 20px;
+  width: 20px;
 }
