@@ -1,3 +1,3 @@
-# Client Side
+# Server Side
 
 Check all packages and install all packages.
