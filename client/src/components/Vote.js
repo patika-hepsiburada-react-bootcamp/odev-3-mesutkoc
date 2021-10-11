@@ -2,6 +2,7 @@ import React from "react";
 import { useVote } from "../contexts/VoteContext";
 import Radio from "./Radio";
 
+//this component contains question and answer options.
 function Vote() {
   const { vote } = useVote();
   return (

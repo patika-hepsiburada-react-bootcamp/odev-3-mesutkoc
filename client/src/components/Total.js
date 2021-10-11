@@ -1,5 +1,6 @@
 import React from "react";
 
+//this component contains each vote name and vote count.
 function Total(item) {
   return (
     <div className="total">

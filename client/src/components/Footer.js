@@ -1,6 +1,7 @@
 import React from "react";
 import GitHubLogo from "../assets/github.png";
-export default function Footer() {
+//this component contains footer elements.
+function Footer() {
   return (
     <div className="footer">
       <p className="footerText">Created by Mesut Koç</p>
@@ -10,3 +11,4 @@ export default function Footer() {
     </div>
   );
 }
+export default Footer;

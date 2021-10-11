@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
 const VoteContext = createContext();
-
+//this part creates, votes context.
 export const VoteProvider = ({ children }) => {
   const selections = [
     {
@@ -25,11 +25,11 @@ export const VoteProvider = ({ children }) => {
       vote: 0,
     },
   ];
+  // create state for user vote.
   const [vote, setVote] = useState(selections);
   const values = {
     vote,
     setVote,
-  
   };
 
   return <VoteContext.Provider value={values}>{children}</VoteContext.Provider>;

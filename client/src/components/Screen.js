@@ -6,6 +6,7 @@ import { useVote } from "../contexts/VoteContext";
 import React, { useEffect } from "react";
 import "./Screen.css";
 
+//this component gathers main components.
 function Screen() {
   const { setVote } = useVote();
   useEffect(() => {

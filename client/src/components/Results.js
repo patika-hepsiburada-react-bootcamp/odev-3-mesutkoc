@@ -2,12 +2,13 @@ import React from "react";
 import { useVote } from "../contexts/VoteContext";
 import {Pie} from "react-chartjs-2"
 
-
+//this component contains votes results and chart.
 function Results() {
+  //getting vote count and set chart values as label-votes  
   const { vote } = useVote();
   const labels = vote.map(item => item.name)
   const votes = vote.map((item) => item.vote);
-
+  // dataset contains chart values.
   const dataset = {
     labels: labels,
     datasets: [
